@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="utf-8">
-<title>a</title>
+<title>修改平安运营商地址</title>
 
 
 <style type="text/css">
@@ -324,22 +324,20 @@ password：Paixxxxxxxxxxxxxxxxxxxxxxxxxx</code></pre></div>
 <ol>
 <li> cd /etc/freeswitch/dialplan</li>
 <li> vi public.xml</li>
-<li> 修改对应的ip就好。</li>
+<li> 修改对应的ip</li>
 <li> 保存 public.xml</li>
 <li> 执行进入fs_cli 进入freeswitch 控制台</li>
 <li> 执行reloadxml   生效修改配置</li>
 </ol>
 
 <p>其他命令：
-打开sip跟踪：sofia global siptrace on
-修改inte</p>
+打开sip跟踪：sofia global siptrace on</p>
 
 <h2 id="toc_3">样例</h2>
 
-<p>修改public.xml中的<strong>180.167.67.243</strong>地址
-<code>&lt;action application=&quot;set&quot; data=&quot;dialstring=sofia/internal/$1@180.167.67.243;fs_path=sip:172.28.50.243;transport=udp&quot;/&gt;
-     &lt;/condition&gt;
-</code></p>
+<p>修改public.xml中的<strong><mark>180.167.67.243</mark></strong>地址</p>
+
+<div><pre><code class="language-none">&lt;action application=&quot;set&quot; data=&quot;dialstring=sofia/internal/$1@180.167.67.243;fs_path=sip:172.28.50.243;transport=udp&quot;/&gt;&lt;/condition&gt;</code></pre></div>
 
 <div><pre><code class="language-freeswitch">&lt;include&gt;
   &lt;context name=&quot;public&quot;&gt;
